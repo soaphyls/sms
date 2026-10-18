@@ -1,0 +1,97 @@
+{
+    "name" : "Assignment Addon",
+    "unique_identifier" : "assignment",
+    "version" : "1.0",
+    "directories" :
+    [
+        {
+            "name" : "uploads/assignment_files"
+        },
+        {
+            "name" : "application/views/backend/student/assignment"
+        },
+        {
+            "name" : "application/views/backend/teacher/assignment"
+        }
+    ],
+    "sql_file"  : "updater.php",
+    "files"     :
+    [
+        {
+            "root_directory"    : "uploads/addons/assignment-addon/controllers/addons/Assignment.php",
+            "update_directory"  : "application/controllers/addons/Assignment.php"
+        },
+        {
+            "root_directory"    : "uploads/addons/assignment-addon/models/addons/Assignment_model.php",
+            "update_directory"  : "application/models/addons/Assignment_model.php"
+        },
+        {
+            "root_directory"    : "uploads/addons/assignment-addon/views/backend/student/assignment/index.php",
+            "update_directory"  : "application/views/backend/student/assignment/index.php"
+        },
+        {
+            "root_directory"    : "uploads/addons/assignment-addon/views/backend/student/assignment/list.php",
+            "update_directory"  : "application/views/backend/student/assignment/list.php"
+        },
+        {
+            "root_directory"    : "uploads/addons/assignment-addon/views/backend/student/assignment/common_script.php",
+            "update_directory"  : "application/views/backend/student/assignment/common_script.php"
+        },
+        {
+            "root_directory"    : "uploads/addons/assignment-addon/views/backend/student/assignment/questions.php",
+            "update_directory"  : "application/views/backend/student/assignment/questions.php"
+        },
+        {
+            "root_directory"    : "uploads/addons/assignment-addon/views/backend/student/assignment/assignment_result.php",
+            "update_directory"  : "application/views/backend/student/assignment/assignment_result.php"
+        },
+        {
+            "root_directory"    : "uploads/addons/assignment-addon/views/backend/teacher/assignment/add_question.php",
+            "update_directory"  : "application/views/backend/teacher/assignment/add_question.php"
+        },
+        {
+            "root_directory"    : "uploads/addons/assignment-addon/views/backend/teacher/assignment/create.php",
+            "update_directory"  : "application/views/backend/teacher/assignment/create.php"
+        },
+        {
+            "root_directory"    : "uploads/addons/assignment-addon/views/backend/teacher/assignment/common_script.php",
+            "update_directory"  : "application/views/backend/teacher/assignment/common_script.php"
+        },
+        {
+            "root_directory"    : "uploads/addons/assignment-addon/views/backend/teacher/assignment/edit.php",
+            "update_directory"  : "application/views/backend/teacher/assignment/edit.php"
+        },
+        {
+            "root_directory"    : "uploads/addons/assignment-addon/views/backend/teacher/assignment/edit_question.php",
+            "update_directory"  : "application/views/backend/teacher/assignment/edit_question.php"
+        },
+        {
+            "root_directory"    : "uploads/addons/assignment-addon/views/backend/teacher/assignment/index.php",
+            "update_directory"  : "application/views/backend/teacher/assignment/index.php"
+        },
+        {
+            "root_directory"    : "uploads/addons/assignment-addon/views/backend/teacher/assignment/list.php",
+            "update_directory"  : "application/views/backend/teacher/assignment/list.php"
+        },
+        {
+            "root_directory"    : "uploads/addons/assignment-addon/views/backend/teacher/assignment/question_list.php",
+            "update_directory"  : "application/views/backend/teacher/assignment/question_list.php"
+        },
+        {
+            "root_directory"    : "uploads/addons/assignment-addon/views/backend/teacher/assignment/questions.php",
+            "update_directory"  : "application/views/backend/teacher/assignment/questions.php"
+        },
+        {
+            "root_directory"    : "uploads/addons/assignment-addon/views/backend/teacher/assignment/student_answer_and_mark.php",
+            "update_directory"  : "application/views/backend/teacher/assignment/student_answer_and_mark.php"
+        },
+        {
+            "root_directory"    : "uploads/addons/assignment-addon/views/backend/teacher/assignment/student_list.php",
+            "update_directory"  : "application/views/backend/teacher/assignment/student_list.php"
+        },
+        {
+            "root_directory"    : "uploads/addons/assignment-addon/views/backend/teacher/assignment/students.php",
+            "update_directory"  : "application/views/backend/teacher/assignment/students.php"
+        }
+    ]
+}

@@ -1,0 +1,59 @@
+{
+    "name" : "Paystack Payment Gateway",
+    "unique_identifier" : "paystack",
+    "version" : "1.2",
+    "about" : "",
+    "directories" :
+    [
+        {
+            "name" : "application/views/bundle_payment"
+        },
+        {
+            "name" : "application/views/bundle_payment/paystack"
+        }
+    ],
+    "sql_file"  : "updater.php",
+    "files"     :
+    [
+        {
+            "root_directory"    : "uploads/addons/paystack-payment-gateway/assets/paystack.png",
+            "update_directory"  : "assets/payment/paystack.png"
+        },
+        {
+            "root_directory"    : "uploads/addons/paystack-payment-gateway/controllers/Paystack.php",
+            "update_directory"  : "application/controllers/addons/Paystack.php"
+        },
+        {
+            "root_directory"    : "uploads/addons/paystack-payment-gateway/models/Paystack_model.php",
+            "update_directory"  : "application/models/addons/Paystack_model.php"
+        },
+        {
+            "root_directory"    : "uploads/addons/paystack-payment-gateway/views/backend/admin/paystack_settings.php",
+            "update_directory"  : "application/views/backend/superadmin/settings/paystack_settings.php"
+        },
+        {
+            "root_directory"    : "uploads/addons/paystack-payment-gateway/views/payment/paystack_payment_gateway.php",
+            "update_directory"  : "application/views/backend/payment_gateway/paystack_payment_gateway.php"
+        },
+        {
+            "root_directory"    : "uploads/addons/paystack-payment-gateway/views/payment/paystack_payment_gateway_form.php",
+            "update_directory"  : "application/views/backend/payment_gateway/paystack_payment_gateway_form.php"
+        },
+        {
+            "root_directory"    : "uploads/addons/paystack-payment-gateway/views/mobile/paystack_payment_gateway.php",
+            "update_directory"  : "application/views/mobile/paystack_payment_gateway.php"
+        },
+        {
+            "root_directory"    : "uploads/addons/paystack-payment-gateway/views/mobile/paystack_payment_gateway_form.php",
+            "update_directory"  : "application/views/mobile/paystack_payment_gateway_form.php"
+        },
+        {
+            "root_directory"    : "uploads/addons/paystack-payment-gateway/views/bundle_payment/paystack/paystack_payment_gateway.php",
+            "update_directory"  : "application/views/bundle_payment/paystack/paystack_payment_gateway.php"
+        },
+        {
+            "root_directory"    : "uploads/addons/paystack-payment-gateway/views/bundle_payment/paystack/paystack_payment_gateway_form.php",
+            "update_directory"  : "application/views/bundle_payment/paystack/paystack_payment_gateway_form.php"
+        }
+    ]
+}

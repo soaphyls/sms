@@ -1,0 +1,101 @@
+<?php
+    // $student_list = $this->crud_model->all_enrolled_student()->result_array();
+    $student_list = $this->user_model->get_user()->result_array();
+?>
+<div class="card">
+	<h3>
+		<span class="p-3"><?php echo get_phrase('write_new_messages');?></span>
+	</h3>
+	<div class="card-body">
+		<form method="post" class="mt-2" action="<?php echo site_url('parent/message/send_new'); ?>" enctype="multipart/form-data">
+
+			<div class="form-group mb-2">
+		        <div class="row">
+		            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		            	<label><?php echo get_phrase('Recipient'); ?></label>
+		            	<i class="float-right mdi mdi-reply"></i>
+			<select class="form-control select2" data-toggle="select2" name="receiver" id="receiver" required>
+				 <option value=""><?php echo get_phrase('select_a_user'); ?></option>
+            <optgroup label="<?php echo get_phrase('student'); ?>">
+                <?php
+                $students = $this->db->get('students')->result_array();
+                foreach ($students as $row):
+                    ?>
+
+                    <option value="student-<?php echo $row['user_id']; ?>">
+                        - <?php echo $this->user_model->get_user_details($row['user_id'], 'name'); ?></option>
+
+                <?php endforeach; ?>
+            </optgroup>
+            <optgroup label="<?php echo get_phrase('teacher'); ?>">
+                <?php
+                $teachers = $this->db->get('teachers')->result_array();
+                foreach ($teachers as $row):
+                    ?>
+
+                    <option value="teacher-<?php echo $row['user_id']; ?>">
+                        - <?php echo $this->user_model->get_user_details($row['user_id'], 'name'); ?></option>
+
+                <?php endforeach; ?>
+            </optgroup>
+            <optgroup label="<?php echo get_phrase('parents'); ?>">
+                <?php
+                $parents = $this->db->get('parents')->result_array();
+                foreach ($parents as $row):
+                    ?>
+
+                    <option value="parent-<?php echo $row['user_id']; ?>">
+                        - <?php echo $this->user_model->get_user_details($row['user_id'], 'name'); ?></option>
+
+                <?php endforeach; ?>
+            </optgroup>
+			<optgroup label="<?php echo get_phrase('parent'); ?>">
+               <?php  $parents = $this->db->get_where('users', array('role' => 'parent'))->result_array();
+						foreach($parents as $parent):
+					?>
+
+                    <option value="parent-<?php echo $this->session->userdata('user_id'); ?>">
+                        - <?php echo $parent['name'] ; ?></option>
+
+                <?php endforeach; ?>
+            </optgroup>
+        </select>
+		            </div>
+		        </div>
+		    </div>
+
+		    <div class="form-group">
+		        <div class="row">
+		            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		                <textarea class="form-control" rows="5" name="message" id="message" placeholder="<?php echo get_phrase('type_your_message'); ?>" required></textarea>
+		            </div>
+		        </div>
+		    </div>
+			
+			 <!-- File adding module -->
+				<div class="form-group mt-4">
+		        <div class="row">
+				  <input type="file" class="form-control file2 inline " name="attached_file_on_messaging" accept=".pdf, .doc, .jpg, .jpeg, .png" data-label="<i class='entypo-upload'></i> Browse" />
+				</div></div>
+			  <!-- end -->
+				<hr>
+		    <div class="form-group mt-4">
+		        <div class="row">
+		            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-13 text-center">
+		                <button type="submit" class="btn btn-success float-right"><?php echo get_phrase('sent_message'); ?></button>
+		            </div>
+		        </div>
+		    </div>
+		</form>
+	</div>
+</div>
+
+<script type="text/javascript">
+	function check_receiver() {
+		var check_receiver = $('#receiver').val();
+		if (check_receiver == '' || check_receiver == 0) {
+			toastr.error("Please select a receiver", "Error");
+            return false;
+		}
+	}
+</script>
